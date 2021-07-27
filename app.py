@@ -10,12 +10,13 @@ PAGE_CONFIG = {"page_title":"Text2Handwriting","page_icon":"https://img.icons8.c
 st.set_page_config(**PAGE_CONFIG)
 
 # Page Styling
-
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Main Function
 def main():
-    page_style = page_styling()
-    st.markdown(page_style,unsafe_allow_html=True)
+    local_css("style.css")
 
     Menu = ['EDA', 'ML']
     choice = st.sidebar.selectbox('Menu',Menu) 
