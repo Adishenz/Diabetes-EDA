@@ -6,23 +6,11 @@ from eda_app import eda_main
 from ml_app import ml_main
 
 # Additional Packages
-
+PAGE_CONFIG = {"page_title":"Text2Handwriting","page_icon":"https://img.icons8.com/doodle/48/000000/multi-edit--v1.png"}
+st.set_page_config(**PAGE_CONFIG)
 
 # Page Styling
-def page_styling():
-    page_style = '''
-    <style>
-    .css-10trblm{
-        text-align: center;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-        border: #f63366;
-        border-style: double;
-        border-radius: 10px;
-        padding: 10px;
-        }
-    </st
-    '''
-    return page_style
+
 
 # Main Function
 def main():
